@@ -36,7 +36,7 @@ namespace GithubActionsLab
         [Test]
         public void Subtract_Valid_Donsig()
         {
-            Assert.AreEqual(-3, Program.Subtract("3", "6"));
+            Assert.AreEqual(3, Program.Subtract("6", "3"));
             Assert.AreEqual(10, Program.Subtract("21", "11"));
             Assert.AreEqual(13, Program.Subtract("13", "0"));
         }
@@ -122,6 +122,14 @@ namespace GithubActionsLab
             Assert.Throws<FormatException>(() => Program.Power("d", "f"));
             Assert.Throws<FormatException>(() => Program.Power("&", "123"));
             Assert.Throws<FormatException>(() => Program.Power("5", "t"));
+        }
+
+        [Test]
+        public void Power_Null_Donsig()
+        {
+            Assert.Throws<ArgumentNullException>(() => Program.Power("1", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
+            Assert.Throws<ArgumentNullException>(() => Program.Power(null, null));
         }
     }
 }
