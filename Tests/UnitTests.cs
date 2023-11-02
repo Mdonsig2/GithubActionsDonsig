@@ -91,7 +91,7 @@ namespace GithubActionsLab
             Assert.AreEqual(12, Program.Divide("144", "12"));
             Assert.AreEqual(1, Program.Divide("13", "13"));
         }
-        /*
+        
         [Test]
         public void Divide_Invalid_Donsig()
         {
@@ -111,7 +111,7 @@ namespace GithubActionsLab
         [Test]
         public void Power_Valid_Donsig()
         {
-            Assert.AreEqual(9, Program.Power("3", "3"));
+            Assert.AreEqual(27, Program.Power("3", "3"));
             Assert.AreEqual(100, Program.Power("10", "2"));
             Assert.AreEqual(256, Program.Power("4", "4"));
         }
@@ -123,7 +123,7 @@ namespace GithubActionsLab
             Assert.Throws<FormatException>(() => Program.Power("&", "123"));
             Assert.Throws<FormatException>(() => Program.Power("5", "t"));
         }
-        */
+        
         [Test]
         public void Power_Null_Donsig()
         {
