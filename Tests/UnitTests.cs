@@ -64,7 +64,7 @@ namespace GithubActionsLab
         {
             Assert.AreEqual(18, Program.Multiply("3", "6"));
             Assert.AreEqual(231, Program.Multiply("21", "11"));
-            Assert.AreEqual(13, Program.Multiply("13", "0"));
+            Assert.AreEqual(0, Program.Multiply("13", "0"));
         }
 
         [Test]
